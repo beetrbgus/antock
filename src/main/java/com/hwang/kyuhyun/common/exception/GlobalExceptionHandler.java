@@ -10,9 +10,9 @@ import java.io.IOException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-    @ExceptionHandler(IOException.class)
-    public ResponseEntity<CommonResponse<Void>> handleException(IOException e) {
-        CommonResponse<Void> response = CommonResponse.fail(ErrorCode.INTERNAL_SERVER_ERROR);
+    @ExceptionHandler(AppCustomException.class)
+    public ResponseEntity<CommonResponse<Void>> handleException(AppCustomException e) {
+        CommonResponse<Void> response = CommonResponse.fail(e.getErrorCode());
 
         return ResponseEntity
                 .status(ErrorCode.INTERNAL_SERVER_ERROR.getHttpStatus())
