@@ -23,7 +23,9 @@ spring:
         format_sql: true
         show_sql: true
 
-
-
+## 다운로드 url
+download:
+  base-url: 'https://www.ftc.go.kr'
+  file-url: '/www/downloadBizComm.do?atchFileUrl=dataopen&atchFileNm='
 server:
   port: 8081
