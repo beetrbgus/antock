@@ -22,6 +22,8 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
         format_sql: true
         show_sql: true
+  config:
+    import: open_data_portal.yml
 
 ## 다운로드 url
 download:
@@ -29,5 +31,6 @@ download:
   file-url: '/www/downloadBizComm.do?atchFileUrl=dataopen&atchFileNm='
   file-prefix: '통신판매사업자'
   file-subfix: '.csv'
+
 server:
   port: 8081
