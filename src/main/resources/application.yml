@@ -27,5 +27,7 @@ spring:
 download:
   base-url: 'https://www.ftc.go.kr'
   file-url: '/www/downloadBizComm.do?atchFileUrl=dataopen&atchFileNm='
+  file-prefix: '통신판매사업자'
+  file-subfix: '.csv'
 server:
   port: 8081
