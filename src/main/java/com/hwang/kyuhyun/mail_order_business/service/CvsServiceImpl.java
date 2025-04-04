@@ -70,13 +70,23 @@ public class CvsServiceImpl implements CvsService {
     @Override
     public List<String[]> readCvs(String path) throws IOException {
         List<String[]> cvsMailOrderBusinessList = new ArrayList<>();
+        boolean isFirstLine = true;
+        int headerLineLength = 0;
 
         try (CSVReader reader = new CSVReader(new FileReader(path, Charset.forName("CP949")));) {
             String[] line;
 
             while ((line = reader.readNext()) != null) {
+                if(isFirstLine) {
+                    isFirstLine = false;
+                    headerLineLength = line.length;
+                    continue;
+                }
+
+                if(headerLineLength == line.length) {
+                    cvsMailOrderBusinessList.add(line);
+                }
                 System.out.println("Line: " + Arrays.toString(line));
-                cvsMailOrderBusinessList.add(line);
             }
             reader.close();
             return cvsMailOrderBusinessList;
