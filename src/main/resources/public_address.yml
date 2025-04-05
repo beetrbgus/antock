@@ -1,0 +1,4 @@
+public-address:
+  authentication-key: 'devU01TX0FVVEgyMDI1MDMyNTE1MTgxMTExNTU3NzE='
+  base-url : 'https://business.juso.go.kr'
+  administrative-district-code-endpoint: '/addrlink/addrLinkApiJsonp.do'
