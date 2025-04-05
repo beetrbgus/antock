@@ -2,11 +2,12 @@ package com.hwang.kyuhyun.mail_order_business.dto;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Getter
+@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class CvsMailOrderBusinessDto {
@@ -63,14 +64,5 @@ public class CvsMailOrderBusinessDto {
         this.itemsHandled = infos[14];
         this.domain = infos[15];
         this.hostServerLocation = infos[16];
-    }
-
-    @Getter
-    @RequiredArgsConstructor
-    public enum CompanyType {
-        CORPORATION("법인"),
-        INDIVIDUAL("개인"),
-        ;
-        private final String value;
     }
 }
