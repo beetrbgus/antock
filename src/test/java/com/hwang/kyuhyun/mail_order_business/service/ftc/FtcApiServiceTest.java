@@ -1,4 +1,4 @@
-package com.hwang.kyuhyun;
+package com.hwang.kyuhyun.mail_order_business.service.ftc;
 
 import com.hwang.kyuhyun.mail_order_business.dto.FtcMailOrderBusinessDto;
 import com.hwang.kyuhyun.mail_order_business.service.federal_trade_commission.FtcMailOrderApiServiceImpl;
