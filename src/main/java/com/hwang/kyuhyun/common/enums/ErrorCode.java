@@ -18,6 +18,7 @@ public enum ErrorCode {
     TOO_FAST_REQUEST(HttpStatus.TOO_MANY_REQUESTS, "이전 요청을 처리하고 있습니다. 10초 후 다시 시도해주세요"),
     NOT_FOUNT_LABEL(HttpStatus.BAD_REQUEST, "해당 통신판매업 컬럼이 존재하지 않습니다."),
     CVS_NOT_VALIDATED(HttpStatus.INTERNAL_SERVER_ERROR, "유효한 CVS 파일이 아닙니다."),
+    NOT_FOUNT_ADDRESS(HttpStatus.NOT_FOUND, "해당 주소로 행정코드를 찾을 수 없습니다."),
     ;
 
     private final HttpStatus httpStatus;
