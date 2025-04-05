@@ -26,7 +26,7 @@ public class FtcMailOrderApiServiceImpl implements FtcMailOrderApiService {
 
 
     @Override
-    public Optional<FtcMailOrderBusinessDto> getMllBsInfoDetailByBrno(String brno) {
+    public Optional<FtcMailOrderBusinessDto> findMailOrderBusinessDetailByBrno(String brno) {
         String apiEndPoint = baseUrl + endPoint;
 
         RestTemplate restTemplate = new RestTemplate();
