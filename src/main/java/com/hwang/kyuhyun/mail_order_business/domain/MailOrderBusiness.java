@@ -20,7 +20,7 @@ public class MailOrderBusiness {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     // 통신판매번호
-    private Long mailOrderId;
+    private String mailOrderId;
     // 회사명
     private String companyName;
     // 사업자 등록 번호
