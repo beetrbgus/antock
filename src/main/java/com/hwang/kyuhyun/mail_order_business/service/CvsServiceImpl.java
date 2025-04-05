@@ -113,7 +113,7 @@ public class CvsServiceImpl implements CvsService {
                 if (headerLineLength == line.length) {
                     cvsMailOrderBusinessList.add(line);
                 } else {
-                    log.warn("CSV 유효하지 않은 행입니다. 행: {}", Arrays.toString(line));
+                    log.warn("CSV 유효하지 않은 행을 건너뜁니다. 행: {}", Arrays.toString(line));
                 }
 
                 log.debug("CSV 행: {}", Arrays.toString(line));
