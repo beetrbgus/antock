@@ -24,7 +24,7 @@ public class FtcApiServiceTest {
         // [2017-서울강남-03850, 서울특별시 강남구, 주식회사 놀러와, 871-81-00930, 법인, 한수정, '02-353-5504, crystal411@naver.com, 20170925, 서울특별시 강남구 삼성동 170번지 9호  , 서울특별시 강남구 테헤란로 625^ 17층 1717호 (삼성동), 정상영업, 02-3423-5382, 인터넷, 종합몰, 30일이내 보완, null]
         String brno = "8718100930";
 
-        Optional<FtcMailOrderBusinessDto> mllBsInfoDetailByBrno = ftcApiService.getMllBsInfoDetailByBrno(brno);
+        Optional<FtcMailOrderBusinessDto> mllBsInfoDetailByBrno = ftcApiService.findMailOrderBusinessDetailByBrno(brno);
         assertTrue(mllBsInfoDetailByBrno.isPresent(), "응답이 존재해야 함.");
 
         FtcMailOrderBusinessDto ftcMailOrderBusinessDto = mllBsInfoDetailByBrno.get();
