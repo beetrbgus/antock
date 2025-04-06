@@ -18,8 +18,8 @@ class PublicAddressApiClientImplTest {
     @Test
     public void findAddressCode() {
         // 서울특별시 강남구 삼성동 170 번지9 호 산 1
-        String address = "서울특별시 마포구 성암로 301";
-        String code = "1144012700";
+        String address = "서울특별시 강남구 압구정로36길";
+        String code = "1168010700";
         String districtCode = publicAddressApiService.findDistrictCodeByAddress(address);
 
         assertNotNull(districtCode);

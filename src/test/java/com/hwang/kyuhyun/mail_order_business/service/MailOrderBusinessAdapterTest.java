@@ -31,22 +31,15 @@ public class MailOrderBusinessAdapterTest {
     @Test
     void saveAllMailOrderBusinessSaveBatch() {
         // 준비 데이터
-        MailOrderBusiness daechiTopEdu = MailOrderBusiness.builder()
-                .mailOrderId("2025-서울강남-01937")
-                .companyName("서울대치탑에듀")
-                .registrationNumber("7021402305")
-                .businessRegistNo("")
+        MailOrderBusiness mailOrderBusiness = MailOrderBusiness.builder()
+                .mailOrderId("2025-서울강남-01934")
+                .companyName("주식회사노스텔지아코퍼레이션(NostalgiaCorporationInc.)")
+                .businessRegistrationNumber("2298703477")
+                .corporationRegistrationNumber("1101110921876")
                 .districtCode("")
                 .build();
 
-        MailOrderBusiness hyunsMade = MailOrderBusiness.builder()
-                .mailOrderId("2025-서울강남-01938")
-                .companyName("현스메이드")
-                .registrationNumber("3450802926")
-                .businessRegistNo("")
-                .districtCode("")
-                .build();
-        List<MailOrderBusiness> mailOrderBusinessList = List.of(daechiTopEdu, hyunsMade);
+        List<MailOrderBusiness> mailOrderBusinessList = List.of(mailOrderBusiness);
 
         mailOrderBusinessAdapter.saveAll(mailOrderBusinessList);
 

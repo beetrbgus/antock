@@ -21,8 +21,8 @@ public class FtcMailOrderApiClientTest {
     @DisplayName("공정 거래 위원회 사업등록번호 가져오기")
     @Test
     void getBusinessInfo() {
-        // [2017-서울강남-03850, 서울특별시 강남구, 주식회사 놀러와, 871-81-00930, 법인, 한수정, '02-353-5504, crystal411@naver.com, 20170925, 서울특별시 강남구 삼성동 170번지 9호  , 서울특별시 강남구 테헤란로 625^ 17층 1717호 (삼성동), 정상영업, 02-3423-5382, 인터넷, 종합몰, 30일이내 보완, null]
-        String brno = "8718100930";
+        // 2025-서울강남-01934	서울특별시 강남구	주식회사 노스텔지아코퍼레이션(Nostalgia Corporation Inc.)	229-87-03477	법인	강승현	02-2158-5403	hr@plac-official.com	20250404	서울특별시 강남구 신사동 620-2	서울특별시 강남구 압구정로36길 18^ 6층 (신사동)	정상영업	02-3423-5382	인터넷	의류/패션/잡화/뷰티	네이버	null
+        String brno = "2298703477";
 
         Optional<FtcMailOrderBusinessDto> mllBsInfoDetailByBrno = ftcApiService.findMailOrderBusinessDetailByBrno(brno);
         assertTrue(mllBsInfoDetailByBrno.isPresent(), "응답이 존재해야 함.");
