@@ -1,4 +1,4 @@
-package com.hwang.kyuhyun.mail_order_business.dto;
+package com.hwang.kyuhyun.infrastructure.api.public_address.dto;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PublicAddressApiResponse {
+public class PublicAddressApiResponseDto {
     private Results results;
 
     @Getter

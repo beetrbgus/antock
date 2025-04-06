@@ -1,4 +1,4 @@
-package com.hwang.kyuhyun.mail_order_business.dto;
+package com.hwang.kyuhyun.infrastructure.api.fair_trade_commission.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

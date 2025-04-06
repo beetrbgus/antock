@@ -1,32 +1,27 @@
-package com.hwang.kyuhyun.mail_order_business.domain;
+package com.hwang.kyuhyun.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "mail_order_business")
+@Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class MailOrderBusiness {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class MailOrderBusinessVO {
     private Long id;
     // 통신판매번호
     private String mailOrderId;
     // 회사명
-    private String companyName;
+    private String businessName;
     // 사업자 등록 번호
     private String registrationNumber;
     // 법인 등록 번호
-    private String businessRegistNo;
+    private String companyRegistrationNo;
     // 행정 구역 번호
     private String districtCode;
+
+    public void setCompanyRegistrationNo(String companyRegistrationNo) {}
 }

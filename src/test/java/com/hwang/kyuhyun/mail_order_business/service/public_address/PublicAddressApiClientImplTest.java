@@ -1,5 +1,6 @@
 package com.hwang.kyuhyun.mail_order_business.service.public_address;
 
+import com.hwang.kyuhyun.infrastructure.api.public_address.PublicAddressApiClientImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +9,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class PublicAddressApiServiceImplTest {
+class PublicAddressApiClientImplTest {
 
     @Autowired
-    private PublicAddressApiServiceImpl publicAddressApiService;
+    private PublicAddressApiClientImpl publicAddressApiService;
 
     @DisplayName("주소로 행정구역 코드 찾기")
     @Test

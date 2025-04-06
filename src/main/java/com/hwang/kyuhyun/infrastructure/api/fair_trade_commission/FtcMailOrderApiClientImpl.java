@@ -1,7 +1,7 @@
-package com.hwang.kyuhyun.mail_order_business.service.federal_trade_commission;
+package com.hwang.kyuhyun.infrastructure.api.fair_trade_commission;
 
-import com.hwang.kyuhyun.mail_order_business.dto.FtcMailOrderBusinessDto;
-import com.hwang.kyuhyun.mail_order_business.dto.FtcMailOrderBusinessResponse;
+import com.hwang.kyuhyun.infrastructure.api.fair_trade_commission.dto.FtcMailOrderBusinessDto;
+import com.hwang.kyuhyun.infrastructure.api.fair_trade_commission.dto.FtcMailOrderBusinessResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-public class FtcMailOrderApiServiceImpl implements FtcMailOrderApiService {
+public class FtcMailOrderApiClientImpl implements FtcMailOrderApiClient {
     @Value("${open-data-portal.authentication-key}")
     private String authenticationKey;
 

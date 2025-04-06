@@ -1,10 +1,10 @@
-package com.hwang.kyuhyun.mail_order_business.service.public_address;
+package com.hwang.kyuhyun.infrastructure.api.public_address;
 
-import com.hwang.kyuhyun.mail_order_business.dto.PublicAddressApiResponse;
+import com.hwang.kyuhyun.infrastructure.api.public_address.dto.PublicAddressApiResponseDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -13,8 +13,8 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 @Slf4j
-@Service
-public class PublicAddressApiServiceImpl implements PublicAddressApiService {
+@Component
+public class PublicAddressApiClientImpl implements PublicAddressApiClient {
     @Value("${public-address.authentication-key}")
     private String confirmKey;
 
@@ -50,12 +50,12 @@ public class PublicAddressApiServiceImpl implements PublicAddressApiService {
         log.info("[주소기반 서비스] API URI: {}", uri);
 
         try {
-            ResponseEntity<PublicAddressApiResponse> response =
-                    restTemplate.getForEntity(uri, PublicAddressApiResponse.class);
+            ResponseEntity<PublicAddressApiResponseDto> response =
+                    restTemplate.getForEntity(uri, PublicAddressApiResponseDto.class);
 
             log.info("[주소기반 서비스] 응답 코드: {}", response.getStatusCode());
 
-            PublicAddressApiResponse body = response.getBody();
+            PublicAddressApiResponseDto body = response.getBody();
             log.debug("[주소기반 서비스] 응답 바디: {}", body); // DEBUG 레벨로 설정
 
             if (body == null || body.getResults() == null || body.getResults().getJuso() == null || body.getResults().getJuso().isEmpty()) {
