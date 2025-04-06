@@ -1,4 +1,4 @@
-package com.hwang.kyuhyun.mail_order_business.dto;
+package com.hwang.kyuhyun.adapter.in.dto;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

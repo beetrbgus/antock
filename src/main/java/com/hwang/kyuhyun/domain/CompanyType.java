@@ -1,4 +1,4 @@
-package com.hwang.kyuhyun.mail_order_business.domain;
+package com.hwang.kyuhyun.domain;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
