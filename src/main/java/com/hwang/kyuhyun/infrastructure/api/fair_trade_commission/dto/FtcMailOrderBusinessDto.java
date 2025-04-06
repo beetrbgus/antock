@@ -34,7 +34,7 @@ public class FtcMailOrderBusinessDto {
     private String chrgDeptTelno; // 관리부서전화번호
     private String rprsvNm; // 대표자명
     private String rprsvEmladr; // 대표자전자우편
-    private int opnSn; // 개방일련번호
+    private String opnSn; // 개방일련번호
     private String prmmiYr; // 인허가번호_년도
     private String prmmiMnno; // 인허가관리번호
     private String ctpvNm; // 시도명

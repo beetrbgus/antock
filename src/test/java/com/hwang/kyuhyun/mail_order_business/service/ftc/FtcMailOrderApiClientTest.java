@@ -1,7 +1,7 @@
 package com.hwang.kyuhyun.mail_order_business.service.ftc;
 
-import com.hwang.kyuhyun.mail_order_business.dto.FtcMailOrderBusinessDto;
-import com.hwang.kyuhyun.mail_order_business.service.federal_trade_commission.FtcMailOrderApiServiceImpl;
+import com.hwang.kyuhyun.infrastructure.api.fair_trade_commission.dto.FtcMailOrderBusinessDto;
+import com.hwang.kyuhyun.infrastructure.api.fair_trade_commission.FtcMailOrderApiClientImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
-public class FtcApiServiceTest {
+public class FtcMailOrderApiClientTest {
     @Autowired
-    private FtcMailOrderApiServiceImpl ftcApiService;
+    private FtcMailOrderApiClientImpl ftcApiService;
 
     @DisplayName("공정 거래 위원회 사업등록번호 가져오기")
     @Test
