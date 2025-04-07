@@ -24,9 +24,9 @@ public class MailOrderBusiness {
     // 회사명
     private String companyName;
     // 사업자 등록 번호
-    private String registrationNumber;
+    private String businessRegistrationNumber;
     // 법인 등록 번호
-    private String businessRegistNo;
+    private String corporationRegistrationNumber;
     // 행정 구역 번호
     private String districtCode;
 }
