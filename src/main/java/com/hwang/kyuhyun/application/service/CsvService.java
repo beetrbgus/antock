@@ -42,9 +42,6 @@ public class CsvService {
         String[] header = rawLines.remove(0);
         int headerLineLength = header.length;
 
-        log.debug("첫 행은 표시될 항목들 입니다.");
-        log.debug(Arrays.toString(header));
-
         List<CvsMailOrderBusinessDto> resultList = rawLines.parallelStream()
                 .map(line -> processConvertLineToDto(line, headerLineLength))
                 .filter(dtoOptional -> dtoOptional.isPresent())

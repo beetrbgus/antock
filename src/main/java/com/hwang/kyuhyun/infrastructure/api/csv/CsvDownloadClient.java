@@ -46,10 +46,7 @@ public class CsvDownloadClient {
      * @throws IOException
      */
     public String downloadCvs(String city, String district) throws IOException {
-        String downloadUrl = UriComponentsBuilder
-                .fromHttpUrl(baseUrl + fileUrl)
-                .pathSegment(filePrefix + "_" + city + "_" + district + fileSuffix)
-                .toUriString();
+        String downloadUrl = String.format("%s%s%s_%s_%s%s", baseUrl, fileUrl, filePrefix, city, district, fileSuffix);
 
         log.info("CSV 다운로드 URL: {}", downloadUrl);
 
